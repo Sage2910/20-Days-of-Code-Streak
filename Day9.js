@@ -5,4 +5,4 @@ function capitalizeFirstLetter(str) {
 }
 const string = prompt('Enter a string: ');
 const result = capitalizeFirstLetter(string);
-console.log(result)
+console.log(result);
