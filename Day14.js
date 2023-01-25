@@ -1,5 +1,19 @@
-// program to get the URL
-const url1 = window.location.href;
-const url2 = document.URL;
-console.log(url1);
-console.log(url2);
+// program to check if a number is a float or integer value
+function checkNumber(x) {
+    if(typeof x == 'number' && !isNaN(x)){
+        if (Number.isInteger(x)) {
+            console.log(`${x} is integer.`);
+        }
+        else {
+            console.log(`${x} is a float value.`);
+        }
+    
+    } else {
+        console.log(`${x} is not a number`);
+    }
+}
+checkNumber('hello');
+checkNumber(44);
+checkNumber(3.4);
+checkNumber(-3.4);
+checkNumber(NaN);
