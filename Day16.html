@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Day 16</title>
+</head>
+<body>
+
+<h1 id="title">Welcome to my website</h1>
+
+<p>Enter a new title and click the button to change the text of the title:</p>
+
+<input type="text" id="newTitle">
+<button onclick="changeTitle()">Change Title</button>
+
+<script>
+  function changeTitle() {
+    var newTitle = document.getElementById("newTitle").value;
+    document.getElementById("title").innerHTML = newTitle;
+  }
+</script>
+
+</body>
+</html>
