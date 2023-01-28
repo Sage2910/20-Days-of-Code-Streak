@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>JavaScript To-Do List</title>
+</head>
+
+<body>
+  <div id="toDoApp">
+    <form>
+      <label for="toDoInput">New To-Do Item:</label>
+      <input type="text" id="toDoInput">
+      <button type="button" onclick="addToDo()">Add</button>
+    </form>
+    <ul id="toDoList"></ul>
+  </div>
+
+  <script>
+    let toDoList = [];
+    function addToDo() {
+      let item = document.getElementById("toDoInput").value;
+      toDoList.push(item);
+      updateToDoList();
+    }
+    function updateToDoList() {
+      let toDoListContainer = document.getElementById("toDoList");
+      toDoListContainer.innerHTML = "";
+      for (let i = 0; i < toDoList.length; i++) {
+        let item = toDoList[i];
+        let newItem = document.createElement("li");
+        newItem.innerHTML = item;
+        toDoListContainer.appendChild(newItem);
+      }
+    }
+  </script>
+</body>
+</html>
